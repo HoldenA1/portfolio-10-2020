@@ -17,6 +17,10 @@
     --name-gradient: linear-gradient(64deg, #463ce4 12%, #6a58de 66%, #ee26ce 100%);
 }
 
+h2 {
+    margin: 1.5em 0 0.4em 0;
+}
+
 input[type="radio"] {
     display: none;
 }
@@ -111,14 +115,15 @@ body {
 }
 
 main {
-    max-width: 80rem;
-    padding: 0 2rem;
+    max-width: 80em;
+    padding: 0 2em;
     margin: auto;
 }
 
 footer {
     display: flex;
     justify-content: center;
+    margin-top: 1em;
 }
 
 header {
@@ -146,9 +151,17 @@ h1 {
     gap: 20px;
 }
 
+info-container {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 3rem;
+    }
+    h2 {
+        text-align: center;
     }
     header {
         align-items: center;
@@ -164,6 +177,24 @@ h1 {
     .project-cards {
         flex-direction: row;
     }
+    info-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    info-container h3 {
+        text-align: center;
+    }
+    info-container section {
+        width: 234px;
+    }
+    .word-list li {
+        text-align: center;
+    }
+    #skills p {
+        text-align: center;
+        max-width: 750px;
+        margin: auto;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -176,7 +207,7 @@ project-card {
     flex: 1 0 45%;
 }
 
-project-card h2 {
+project-card h3 {
     color: var(--color-heading);
     margin-top: 0;
 }
@@ -186,7 +217,7 @@ project-card a {
     color: var(--color-text);
 }
 
-project-card:hover h2 {
+project-card:hover h3 {
     color: var(--color-accent);
 }
 
@@ -200,4 +231,33 @@ project-card img {
 
 .card-body {
     padding: 16px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+address a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+address a:hover {
+    color: var(--color-accent);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.word-list {
+    column-count: 2;
+}
+
+address li {
+    margin: 0.5em 0;
 }
